@@ -1,0 +1,198 @@
+{
+  "schemes" : [
+    {
+      "pointer" : {
+        "speed" : 0.0689655172413792768,
+        "disableAcceleration" : false,
+        "acceleration" : 1
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "button" : 2,
+            "shift" : false,
+            "action" : "missionControl",
+            "command" : true,
+            "option" : false,
+            "control" : false
+          }
+        ],
+        "clickDebouncing" : {
+          "timeout" : 0
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 0
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "reverse" : {
+          "vertical" : true
+        }
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "productID" : "0xc53f",
+          "category" : "mouse",
+          "productName" : "USB Receiver"
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xfa7c",
+          "productName" : "Pulsar Xlite Wireless",
+          "vendorID" : "0x25a7"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "option" : false,
+            "control" : false,
+            "command" : true,
+            "action" : "missionControl",
+            "shift" : false,
+            "button" : 2
+          }
+        ]
+      }
+    },
+    {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x25a7",
+          "category" : "mouse",
+          "productID" : "0xfa7c",
+          "productName" : "Pulsar Xlite Wireless"
+        },
+        "app" : "com.tinyspeck.slackmacgap"
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0xfa7b",
+          "category" : "mouse",
+          "productName" : "Pulsar Xlite Wireless",
+          "vendorID" : "0x25a7"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "button" : 2,
+            "command" : true,
+            "option" : false,
+            "shift" : false,
+            "control" : false,
+            "action" : "missionControl"
+          }
+        ]
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productName" : "USB Optical Mouse ",
+          "vendorID" : "0x30fa",
+          "productID" : "0x300",
+          "category" : "mouse"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productName" : "LOGI M240",
+          "category" : "mouse",
+          "serialNumber" : "D2CA8C55",
+          "productID" : "0xb03a",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "modifiers" : {
+          "vertical" : {
+            "command" : {
+              "type" : "auto"
+            }
+          }
+        },
+        "acceleration" : {
+          "vertical" : 2
+        },
+        "reverse" : {
+          "vertical" : true
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.875,
+        "speed" : 0.0942,
+        "disableAcceleration" : false
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "option" : false,
+            "shift" : false,
+            "button" : 2,
+            "command" : true,
+            "control" : false,
+            "action" : "missionControl"
+          }
+        ]
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "category" : "trackpad",
+          "vendorID" : "0x5ac",
+          "productID" : "0x342"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    }
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+}

@@ -1,0 +1,11 @@
+node_modules/
+**/node_modules
+github-copilot/
+configstore
+joplin-desktop
+psysh
+raycast
+yarn
+btop/*.log
+iterm2
+jgit
