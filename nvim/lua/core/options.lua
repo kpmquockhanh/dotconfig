@@ -1,6 +1,7 @@
 local opt = vim.opt
 local g = vim.g
 
+opt.cmdheight = 0
 -- Cursor highlighting
 opt.cursorline = true
 opt.cursorcolumn = true

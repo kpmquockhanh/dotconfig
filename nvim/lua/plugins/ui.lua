@@ -32,6 +32,7 @@ return {
     "rcarriga/nvim-notify",
     event = { "BufReadPost", "BufNewFile" },
     opts = {
+      render = "wrapped-default",
       timeout = 3000,
       max_height = function()
         return math.floor(vim.o.lines * 0.75)

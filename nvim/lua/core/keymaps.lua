@@ -91,3 +91,11 @@ map("t", "<C-h>", "<cmd>wincmd h<CR>", { desc = "Go to left window" })
 map("t", "<C-j>", "<cmd>wincmd j<CR>", { desc = "Go to lower window" })
 map("t", "<C-k>", "<cmd>wincmd k<CR>", { desc = "Go to upper window" })
 map("t", "<C-l>", "<cmd>wincmd l<CR>", { desc = "Go to right window" })
+
+-- Move selected lines up and down in visual mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Move current line up and down in normal mode
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==")
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==")

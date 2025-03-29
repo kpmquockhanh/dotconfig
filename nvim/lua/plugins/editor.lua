@@ -430,7 +430,7 @@ return {
       { "<leader>fw", "<cmd>Telescope live_grep<CR>", desc = "Words" },
       { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
       { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Help" },
-      { "<leader>fm", "<cmd>Telescope man_pages<CR>", desc = "Man pages" },
+      { "<leader>fM", "<cmd>Telescope man_pages<CR>", desc = "Man pages" },
       { "<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Recently opened" },
       { "<leader>fR", "<cmd>Telescope registers<CR>", desc = "Registers" },
       { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },

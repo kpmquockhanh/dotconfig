@@ -130,7 +130,6 @@ return {
         }, ]]
         -- cssls = {},
         gopls = {},
-        ts_ls = {},
       },
     },
     config = function(_, opts)
@@ -140,6 +139,24 @@ return {
         lspconfig[server].setup(config)
       end
 
+      local mason_registry = require("mason-registry")
+      local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
+        .. "/node_modules/@vue/language-server"
+      lspconfig.ts_ls.setup({
+        init_options = {
+          plugins = {
+            {
+              name = "@vue/typescript-plugin",
+              location = vue_language_server_path,
+              languages = { "vue" },
+            },
+          },
+        },
+        filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+      })
+
+      -- No need to set `hybridMode` to `true` as it's the default value
+      lspconfig.volar.setup({})
       vim.diagnostic.config(vim.deepcopy(opts.diagnostics))
     end,
   },
@@ -166,6 +183,17 @@ return {
     "stevearc/conform.nvim",
     event = "BufWritePre",
     cmd = "ConformInfo",
+    keys = {
+      {
+        -- Customize or remove this keymap to your liking
+        "<leader>fm",
+        function()
+          require("conform").format({ async = true })
+        end,
+        mode = "",
+        desc = "Format buffer",
+      },
+    },
     init = function()
       vim.api.nvim_create_user_command("FormatDisable", function(args)
         if args.bang then
@@ -201,10 +229,15 @@ return {
         -- cpp = { "clang-format" },
         php = { "php_cs_fixer" },
         -- c = { "clang-format" },
+        vue = { "prettierd" },
         ["*"] = {
           "trim_whitespace",
           "squeeze_blanks",
         },
+        css = { "prettierd" },
+        scss = { "prettierd" },
+        conf = { "prettierd" },
+        html = { "prettierd" },
         -- ["_"] = {},
       },
       -- Default options
