@@ -1,0 +1,9 @@
+[user]
+	name = kpm
+	email = kpmquockhanh@gmail.com
+
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
